@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo 'Generating OTP code...'
+otp_code=`ruby rotp.rb $1`
+if [ $? -eq 0 ]
+then
+  echo $otp_code | pbcopy
+  echo $otp_code
+  echo 'Success! Copied to clipboard.'
+else
+  echo 'Failed!'
+fi
