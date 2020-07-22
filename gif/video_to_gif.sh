@@ -13,7 +13,7 @@ if [ -z "\"$video\"" ]; then
   exit 1
 fi
 
-echo "Converting video \`$video\`"
+echo "converting video \`$video\`"
 
 if [ -d "temp" ]; then
   echo "error: temp directory already exists!"
