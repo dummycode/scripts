@@ -11,18 +11,17 @@ from selenium.webdriver.support import expected_conditions as ec
 # Config
 USERNAME = "henrythomasharris@gmail.com"
 PASSWORD = "L*sZCgz3F1"
-GO_TIME = datetime(2021, 5, 31, 15, 0, 0)
+GO_TIME = datetime(2021, 6, 3, 15, 0, 0)
 EVENT_URL = "https://www.recreation.gov/ticket/233338/ticket/16"
 
 # Params
-GUEST_COUNT = 5
+GUEST_COUNT = 10
 DEBUG_DATE = "Saturday, July 24, 2021, available"
-TEST_DATE = "Tuesday, June 1, 2021, available"
+TEST_DATE = "Friday, June 4, 2021, available"
 REAL_DATE = "Saturday, June 12, 2021, available"
 DEBUG_TIMES = ["0800", "0900"]
 TEST_TIMES = ["0800", "0900", "0945"]
 REAL_TIMES = ["0800", "0900", "0945", "1000", "1045", "1100", "1200", "1245", "1300", "1345", "1400", "1430", "1500", "1530"]
-
 
 
 def wait_by_xpath(driver, xpath, wait=10):
@@ -46,6 +45,7 @@ def login(driver):
 
 
 def wait_till_time(time=GO_TIME):
+    print("Waiting until go time...")
     pause.until(time)
 
 
