@@ -18,5 +18,5 @@ if is_weekday(current_datetime) and is_between(current_time, morning, evening):
         exit()
 
 print("Locking...")
-subprocess.run(["pmset", "displaysleepnow"])
+subprocess.run('osascript lock.scpt'.split(' '))
 

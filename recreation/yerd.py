@@ -11,13 +11,13 @@ from selenium.webdriver.support import expected_conditions as ec
 # Config
 USERNAME = "henrythomasharris@gmail.com"
 PASSWORD = "L*sZCgz3F1"
-GO_TIME = datetime(2021, 6, 3, 15, 0, 0)
+GO_TIME = datetime(2021, 6, 4, 15, 0, 0)
 EVENT_URL = "https://www.recreation.gov/ticket/233338/ticket/16"
 
 # Params
 GUEST_COUNT = 10
 DEBUG_DATE = "Saturday, July 24, 2021, available"
-TEST_DATE = "Friday, June 4, 2021, available"
+TEST_DATE = "Saturday, June 5, 2021, available"
 REAL_DATE = "Saturday, June 12, 2021, available"
 DEBUG_TIMES = ["0800", "0900"]
 TEST_TIMES = ["0800", "0900", "0945"]
