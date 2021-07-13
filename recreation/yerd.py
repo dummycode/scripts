@@ -11,17 +11,13 @@ from selenium.webdriver.support import expected_conditions as ec
 # Config
 USERNAME = "henrythomasharris@gmail.com"
 PASSWORD = "L*sZCgz3F1"
-GO_TIME = datetime(2021, 6, 4, 15, 0, 0)
+GO_TIME = datetime(2021, 6, 11, 15, 0, 0)
 EVENT_URL = "https://www.recreation.gov/ticket/233338/ticket/16"
 
 # Params
-GUEST_COUNT = 10
-DEBUG_DATE = "Saturday, July 24, 2021, available"
-TEST_DATE = "Saturday, June 5, 2021, available"
+GUEST_COUNT = 5
 REAL_DATE = "Saturday, June 12, 2021, available"
-DEBUG_TIMES = ["0800", "0900"]
-TEST_TIMES = ["0800", "0900", "0945"]
-REAL_TIMES = ["0800", "0900", "0945", "1000", "1045", "1100", "1200", "1245", "1300", "1345", "1400", "1430", "1500", "1530"]
+REAL_TIMES = ["0800", "0900", "0945", "1000"]
 
 
 def wait_by_xpath(driver, xpath, wait=10):
@@ -66,7 +62,7 @@ def set_date(driver):
         driver.find_element_by_class_name("right").click()
 
 
-    xpath = '//*[@aria-label="' + TEST_DATE + '"]'
+    xpath = '//*[@aria-label="' + REAL_DATE + '"]'
     wait = WebDriverWait(driver, 10)
     wait.until(ec.visibility_of_element_located((By.XPATH, xpath)))
 
@@ -131,7 +127,7 @@ def book_tickets(driver, time):
 def main():
     print("Yerd")
 
-    for time in TEST_TIMES:
+    for time in REAL_TIMES:
         chrome_options = Options()
         chrome_options.add_experimental_option("detach", True)
 
