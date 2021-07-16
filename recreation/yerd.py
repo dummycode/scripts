@@ -9,8 +9,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
 # Config
-USERNAME = "henrythomasharris@gmail.com"
-PASSWORD = "L*sZCgz3F1"
+USERNAME = "USERNAME"
+PASSWORD = "PASSWORD"
 GO_TIME = datetime(2021, 6, 11, 15, 0, 0)
 EVENT_URL = "https://www.recreation.gov/ticket/233338/ticket/16"
 
